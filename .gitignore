@@ -1,6 +1,5 @@
 # Eclipse
-.project
-.classpath
+
 .settings
 .checkstyle
 
@@ -24,12 +23,10 @@ pom.xml.*
 # Ant
 bin
 gen
-build.xml
-ant.properties
-local.properties
-proguard.cfg
-proguard-project.txt
 
 # Other
 .DS_Store
 tmp
+
+#Crashlytics
+library/res/values/com_crashlytics_export_strings.xml
