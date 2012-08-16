@@ -56,7 +56,7 @@ public class SherlockFragment extends Fragment implements OnCreateOptionsMenuLis
     }
 
     @Override
-    public final boolean onOptionsItemSelected(android.view.MenuItem item) {
+    public boolean onOptionsItemSelected(android.view.MenuItem item) {
         return onOptionsItemSelected(new MenuItemWrapper(item));
     }
 
