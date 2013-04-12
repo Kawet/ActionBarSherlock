@@ -1,12 +1,13 @@
 package com.actionbarsherlock.app;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
+
 import com.actionbarsherlock.ActionBarSherlock;
 import com.actionbarsherlock.ActionBarSherlock.OnActionModeFinishedListener;
 import com.actionbarsherlock.ActionBarSherlock.OnActionModeStartedListener;
@@ -17,6 +18,7 @@ import com.actionbarsherlock.view.ActionMode;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
+import com.good.gd.PreferenceActivity;
 
 public abstract class SherlockPreferenceActivity extends PreferenceActivity implements OnCreatePanelMenuListener, OnPreparePanelListener, OnMenuItemSelectedListener, OnActionModeStartedListener, OnActionModeFinishedListener {
     private ActionBarSherlock mSherlock;
@@ -140,7 +142,8 @@ public abstract class SherlockPreferenceActivity extends PreferenceActivity impl
         getSherlock().dispatchInvalidateOptionsMenu();
     }
 
-    public void supportInvalidateOptionsMenu() {
+    @SuppressLint("NewApi")
+	public void supportInvalidateOptionsMenu() {
         invalidateOptionsMenu();
     }
 
